@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (col.gameObject.layer == 6)
         {
+            FindObjectOfType<AudioManager>().Play("Hit");
             puckRB.AddForce(difference * hitForce, ForceMode2D.Impulse);
         }
     }

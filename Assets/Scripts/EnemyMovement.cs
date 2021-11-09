@@ -66,6 +66,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (col.gameObject.layer == 6)
         {
+            FindObjectOfType<AudioManager>().Play("Hit");
             puckRB.AddForce(difference * attackForce, ForceMode2D.Impulse);
         }
     }
