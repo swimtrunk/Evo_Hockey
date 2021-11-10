@@ -5360,8 +5360,8 @@ MonoBehaviour:
   player3: {fileID: 528333931}
   player4: {fileID: 816862312}
   lowerScaleEvoSize: {x: 0.1, y: 0.1, z: 1}
-  higherScaleEvoSize: {x: 0.3, y: 0.3, z: 1}
-  EvoDuration: 10
+  higherScaleEvoSize: {x: 0.35, y: 0.35, z: 1}
+  EvoDuration: 15
   EvoDurationChange: 0
 --- !u!1 &1676771682
 GameObject:
@@ -6104,8 +6104,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Hit
-    clip: {fileID: 8300000, guid: 0d7042714b20f2044bde8a29dd689c15, type: 3}
-    volume: 0.15
+    clip: {fileID: 8300000, guid: 1593a18771c096349b8e065a0f7bf67c, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
