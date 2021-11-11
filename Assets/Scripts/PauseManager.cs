@@ -63,6 +63,7 @@ public class PauseManager : MonoBehaviour
 
     public void Resume()
     {
+        FindObjectOfType<AudioManager>().Play("PauseClose");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
@@ -70,6 +71,7 @@ public class PauseManager : MonoBehaviour
 
     void Pause()
     {
+        FindObjectOfType<AudioManager>().Play("PauseOpen");
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;

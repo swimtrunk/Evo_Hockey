@@ -16,6 +16,7 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
+        FindObjectOfType<AudioManager>().Play("Start");
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
