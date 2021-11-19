@@ -79,6 +79,7 @@ public class PauseManager : MonoBehaviour
 
     public void LoadMenu()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         Time.timeScale = 1f;
         SceneManager.LoadScene("MenuScene");
         gameIsPaused = false;
@@ -86,6 +87,7 @@ public class PauseManager : MonoBehaviour
 
     public void QuitGame()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         Application.Quit();
     }
 

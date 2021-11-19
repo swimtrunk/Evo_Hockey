@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
 
     public void Quit()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         Debug.Log("Can't believe you just quit air-hockey, you're so bad. Learn to play. Git gud.");
         Application.Quit();
     }
@@ -23,18 +24,21 @@ public class MenuManager : MonoBehaviour
 
     public void LoadCastMenu()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         mainMenuUI.SetActive(false);
         castMenuUI.SetActive(true);
     }
 
     public void LoadRulesMenu()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         mainMenuUI.SetActive(false);
         rulesMenuUI.SetActive(true);
     }
 
     public void LoadMenu()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         rulesMenuUI.SetActive(false);
         castMenuUI.SetActive(false);
         mainMenuUI.SetActive(true);

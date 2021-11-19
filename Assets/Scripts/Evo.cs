@@ -153,6 +153,8 @@ public class Evo : MonoBehaviour
 
     void PinpointEvo()
     {
+        EvoDuration = EvoDuration / 2;
+
         if (whichGoalScript.p1GoalHits == 15 && PinpointEvoUsed == false)
         {
             playerMovementScript.moveSpeed = 0;
