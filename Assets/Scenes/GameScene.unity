@@ -3582,6 +3582,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUp: {fileID: 1473752770}
   powerUpGiven: 0
+  playerOnePowerOne: {fileID: 1852425891}
+  playerOnePowerTwo: {fileID: 204978145}
+  playerOnePowerThree: {fileID: 711562888}
+  playerTwoPowerOne: {fileID: 1435646036}
+  playerTwoPowerTwo: {fileID: 492161164}
+  playerTwoPowerThree: {fileID: 137707599}
+  playerThreePowerOne: {fileID: 1211688416}
+  playerThreePowerTwo: {fileID: 1237399920}
+  playerThreePowerThree: {fileID: 1926681824}
+  playerFourPowerOne: {fileID: 2133050335}
+  playerFourPowerTwo: {fileID: 302787786}
+  playerFourPowerThree: {fileID: 1113696488}
 --- !u!1 &948862484
 GameObject:
   m_ObjectHideFlags: 0
