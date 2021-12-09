@@ -7,8 +7,8 @@ public class PowerUp : MonoBehaviour
     /* This script handles the modifcations and movement of the Power Up */
 
     //Circle rotation variables
-    float timeCounter = 0f;
-    int timeRounded;
+    [HideInInspector] public float timeCounter = 0f;
+    public int timeRounded;
     public int durationTime;
     bool canChangeSprite = true;
 
@@ -32,6 +32,14 @@ public class PowerUp : MonoBehaviour
 
     void Update()
     {
+        //Circle rotation handling
+        timeCounter += Time.deltaTime;
+        timeRounded = Mathf.RoundToInt(timeCounter);
+        x = Mathf.Cos(timeCounter) * radius;
+        y = Mathf.Sin(timeCounter) * radius;
+
+        powerUp.transform.position = new Vector3(x, y, z);
+
         //Puck interaction and power up swap handling
         if (powerUp.activeSelf == false)
         {
@@ -48,14 +56,6 @@ public class PowerUp : MonoBehaviour
         {
             powerUpGrabScript.powerGrabbed = false;
         }
-
-        //Circle rotation handling
-        timeCounter += Time.deltaTime;
-        timeRounded = Mathf.RoundToInt(timeCounter);
-        x = Mathf.Cos(timeCounter) * radius;
-        y = Mathf.Sin(timeCounter) * radius;
-
-        powerUp.transform.position = new Vector3(x, y, z);
     }
 
     void ChangeSprite()

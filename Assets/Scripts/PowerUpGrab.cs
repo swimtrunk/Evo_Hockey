@@ -13,26 +13,29 @@ public class PowerUpGrab : MonoBehaviour
 
     public GameObject puck;
     WhichContact whichContactScript;
+
     public GameObject paddleOne;
     public GameObject paddleTwo;
     public GameObject paddleThree;
     public GameObject paddleFour;
 
-    PowerUpGive powerUpGiveScript;
     public GameObject powerSpawner;
+    PowerUp powerUpScript;
+    public Sprite powerUpSprite;
 
     void Start()
     {
         whichContactScript = puck.GetComponent<WhichContact>();
-        powerUpGiveScript = powerSpawner.GetComponent<PowerUpGive>();
+        powerUpScript = powerSpawner.GetComponent<PowerUp>();
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.layer == 6)
         {
-            powerUpGiveScript.powerUpGiven = false;
+            powerUpScript.timeCounter = 0;
             HandleWhoToGive();
+            powerUpSprite = powerUp.GetComponent<SpriteRenderer>().sprite;
             powerUp.SetActive(false);
             powerGrabbed = true;
         }

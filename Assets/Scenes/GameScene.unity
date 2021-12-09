@@ -2028,6 +2028,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 455271385}
+  - component: {fileID: 455271386}
+  - component: {fileID: 455271387}
+  - component: {fileID: 455271388}
   m_Layer: 0
   m_Name: PowerHolders
   m_TagString: Untagged
@@ -2053,6 +2056,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &455271386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455271384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e59f93cc7c7dfae439bc687cc0c9f4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOneAttack: {fileID: 1852425891}
+  playerTwoAttack: {fileID: 1435646036}
+  playerThreeAttack: {fileID: 1211688416}
+  playerFourAttack: {fileID: 2133050335}
+  attackSprite: {fileID: 21300000, guid: 1412712a1fc2ebc4581a8f203ba44067, type: 3}
+  powerUpObject: {fileID: 1473752770}
+--- !u!114 &455271387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455271384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8de3df6ad89cfd4bb02994c2e7ec460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOneSteal: {fileID: 204978145}
+  playerTwoSteal: {fileID: 492161164}
+  playerThreeSteal: {fileID: 1237399920}
+  playerFourSteal: {fileID: 302787786}
+  stealSprite: {fileID: 21300000, guid: 8cea517d11ddf8a41bf39a902240cab3, type: 3}
+  powerUpObject: {fileID: 1473752770}
+--- !u!114 &455271388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455271384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba26cc9fdd8bbe4c9dd0ee1e96fa0d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOneTime: {fileID: 711562888}
+  playerTwoTime: {fileID: 137707599}
+  playerThreeTime: {fileID: 1926681824}
+  playerFourTime: {fileID: 1113696488}
+  timeSprite: {fileID: 21300000, guid: 4e491c82353a6ea489f767af1b9e518c, type: 3}
+  powerUpObject: {fileID: 1473752770}
 --- !u!4 &461155528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8741980532874903736, guid: 1691a3e00c0bc044eb5b0650605b5ac1, type: 3}
@@ -3526,7 +3583,6 @@ GameObject:
   m_Component:
   - component: {fileID: 937098205}
   - component: {fileID: 937098204}
-  - component: {fileID: 937098206}
   m_Layer: 0
   m_Name: PowerUpSpawner
   m_TagString: Untagged
@@ -3546,6 +3602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c630876430f75fb42beb9c04734ac4ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeCounter: 0
+  timeRounded: 0
   durationTime: 30
   radius: 4
   powerUpSprites:
@@ -3568,32 +3626,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &937098206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937098203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bc52bbccfa81054584f9fa507f72316, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUp: {fileID: 1473752770}
-  powerUpGiven: 0
-  playerOnePowerOne: {fileID: 1852425891}
-  playerOnePowerTwo: {fileID: 204978145}
-  playerOnePowerThree: {fileID: 711562888}
-  playerTwoPowerOne: {fileID: 1435646036}
-  playerTwoPowerTwo: {fileID: 492161164}
-  playerTwoPowerThree: {fileID: 137707599}
-  playerThreePowerOne: {fileID: 1211688416}
-  playerThreePowerTwo: {fileID: 1237399920}
-  playerThreePowerThree: {fileID: 1926681824}
-  playerFourPowerOne: {fileID: 2133050335}
-  playerFourPowerTwo: {fileID: 302787786}
-  playerFourPowerThree: {fileID: 1113696488}
 --- !u!1 &948862484
 GameObject:
   m_ObjectHideFlags: 0
@@ -3766,6 +3798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 994229754}
+  - component: {fileID: 994229755}
   m_Layer: 0
   m_Name: Player1Powers
   m_TagString: Untagged
@@ -3790,6 +3823,25 @@ Transform:
   m_Father: {fileID: 455271385}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &994229755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994229753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2106ed329c82049b5f598f06f912c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPower: {fileID: 1852425891}
+  stealPower: {fileID: 204978145}
+  timePower: {fileID: 711562888}
+  emptyPower: {fileID: 21300000, guid: 721e6acb54948b84d9e6a04c9a85f4e2, type: 3}
+  attackPowerSprite: {fileID: 21300000, guid: 1412712a1fc2ebc4581a8f203ba44067, type: 3}
+  stealPowerSprite: {fileID: 21300000, guid: 8cea517d11ddf8a41bf39a902240cab3, type: 3}
+  timePowerSprite: {fileID: 21300000, guid: 4e491c82353a6ea489f767af1b9e518c, type: 3}
 --- !u!1 &1008200867
 GameObject:
   m_ObjectHideFlags: 0
@@ -6184,7 +6236,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6231,6 +6283,7 @@ MonoBehaviour:
   paddleThree: {fileID: 528333930}
   paddleFour: {fileID: 816862311}
   powerSpawner: {fileID: 937098203}
+  powerUpSprite: {fileID: 0}
 --- !u!1 &1505592374
 GameObject:
   m_ObjectHideFlags: 0
