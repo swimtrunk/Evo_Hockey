@@ -23,6 +23,7 @@ public class EnemyMovement : MonoBehaviour
     Rigidbody2D enemyPaddleRB;
     public float moveSpeed = 0.1f;
     public float attackForce = 10f;
+    public float speedMultiplier = 1f;
     Vector2 position = new Vector2(7f, 0f);
 
     void Start()
@@ -43,10 +44,10 @@ public class EnemyMovement : MonoBehaviour
         rotation = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(180f + rotation, Vector3.forward);*/
 
-        position = Vector2.Lerp(transform.position, puckLoc, moveSpeed);
+        position = Vector2.Lerp(transform.position, puckLoc, moveSpeed * speedMultiplier);
         puckLoc = target.position;
 
-        startingPos = Vector2.Lerp(transform.position, startingPosPlaceholder, moveSpeed);
+        startingPos = Vector2.Lerp(transform.position, startingPosPlaceholder, moveSpeed * speedMultiplier);
     }
 
     void FixedUpdate()

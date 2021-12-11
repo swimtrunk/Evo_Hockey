@@ -43,6 +43,7 @@ public class PowerUp : MonoBehaviour
         //Puck interaction and power up swap handling
         if (powerUp.activeSelf == false)
         {
+            powerUpGrabScript.powerUpSprite = null;
             canChangeSprite = true;
         }
 

@@ -11,7 +11,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D puckRB;
     private Rigidbody2D paddleRB;
     public float moveSpeed = 0.1f;
+    public float speedMultiplier = 1f;
     public float hitForce = 100f;
+    public float hitMultiplier = 1f;
     private bool isMoving;
 
     Vector2 position = new Vector2(0f, 0f);
@@ -31,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButton("Fire1"))
             {
                 isMoving = true;
-                position = Vector2.Lerp(transform.position, mousePos, moveSpeed);
+                position = Vector2.Lerp(transform.position, mousePos, moveSpeed * speedMultiplier);
             }
 
             paddleRB.velocity = new Vector2(0, 0);
@@ -53,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         if (col.gameObject.layer == 6)
         {
             FindObjectOfType<AudioManager>().Play("Hit");
-            puckRB.AddForce(difference * hitForce, ForceMode2D.Impulse);
+            puckRB.AddForce(difference * hitForce * hitMultiplier, ForceMode2D.Impulse);
         }
     }
 }

@@ -396,6 +396,7 @@ MonoBehaviour:
   puck: {fileID: 589200298}
   moveSpeed: 0.08
   attackForce: 12
+  speedMultiplier: 1
 --- !u!58 &74451079
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2686,6 +2687,7 @@ MonoBehaviour:
   puck: {fileID: 589200298}
   moveSpeed: 0.08
   attackForce: 12
+  speedMultiplier: 1
 --- !u!58 &528333933
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3352,6 +3354,7 @@ MonoBehaviour:
   puck: {fileID: 589200298}
   moveSpeed: 0.08
   attackForce: 12
+  speedMultiplier: 1
 --- !u!58 &816862314
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3604,7 +3607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeCounter: 0
   timeRounded: 0
-  durationTime: 30
+  durationTime: 25
   radius: 4
   powerUpSprites:
   - {fileID: 21300000, guid: 1412712a1fc2ebc4581a8f203ba44067, type: 3}
@@ -3842,6 +3845,12 @@ MonoBehaviour:
   attackPowerSprite: {fileID: 21300000, guid: 1412712a1fc2ebc4581a8f203ba44067, type: 3}
   stealPowerSprite: {fileID: 21300000, guid: 8cea517d11ddf8a41bf39a902240cab3, type: 3}
   timePowerSprite: {fileID: 21300000, guid: 4e491c82353a6ea489f767af1b9e518c, type: 3}
+  powerTimeDuration: 15
+  player: {fileID: 1830299960}
+  puck: {fileID: 589200303}
+  playerTwo: {fileID: 74451076}
+  playerThree: {fileID: 528333930}
+  playerFour: {fileID: 816862311}
 --- !u!1 &1008200867
 GameObject:
   m_ObjectHideFlags: 0
@@ -7241,7 +7250,9 @@ MonoBehaviour:
   puck: {fileID: 589200298}
   paddle: {fileID: 1830299960}
   moveSpeed: 0.2
+  speedMultiplier: 1
   hitForce: 10
+  hitMultiplier: 1
 --- !u!212 &1830299962
 SpriteRenderer:
   m_ObjectHideFlags: 0
